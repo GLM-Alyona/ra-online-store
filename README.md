@@ -1,3 +1,5 @@
+https://glm-alyona-ra-online-store.onrender.com/ra-online-store/
+
 # Обувной Интернет-магазин "BosaNoga"
 
 Проект интернет-магазина обуви.
