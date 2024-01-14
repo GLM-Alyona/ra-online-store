@@ -6,7 +6,7 @@ import { topSalesFailure, topSalesSucces } from "../actions/actionCreators/actio
 
 export const topSalesEpic = action$ => action$.pipe(
     ofType(TOPSALES_REQUEST),
-    switchMap(() => ajax.getJSON('https://ra-online-store-backend-rtff.onrender.com/api/top-sales').pipe(
+    switchMap(() => ajax.getJSON('https://ra-online-store-backend-nb19.onrender.com/api/top-sales').pipe(
         map(o => topSalesSucces(o)),
         catchError(o => of(topSalesFailure(o))),
     ))

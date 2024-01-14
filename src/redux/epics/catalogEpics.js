@@ -27,7 +27,7 @@ export const catalogEpic = action$ => action$.pipe(
         return prefParams + new URLSearchParams(params);
     }),
     debounceTime(500),
-    switchMap((params) => ajax.getJSON(`https://ra-online-store-backend-rtff.onrender.com/api/items${params}`).pipe(
+    switchMap((params) => ajax.getJSON(`https://ra-online-store-backend-nb19.onrender.com/api/items${params}`).pipe(
         map(o => catalogSucces(o)),
         catchError(o => of(catalogFailure(o))),
     ))

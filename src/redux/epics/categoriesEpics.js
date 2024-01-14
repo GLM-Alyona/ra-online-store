@@ -6,7 +6,7 @@ import { categoriesFailure, categoriesSucces } from "../actions/actionCreators/a
 
 export const categoriesEpic = action$ => action$.pipe(
     ofType(CATEGORIES_REQUEST),
-    switchMap(() => ajax.getJSON('https://ra-online-store-backend-rtff.onrender.com/api/categories').pipe(
+    switchMap(() => ajax.getJSON('https://ra-online-store-backend-nb19.onrender.com/api/categories').pipe(
         map(o => {           
             o.unshift({ id: 1, title: 'Все' })
             return categoriesSucces(o)

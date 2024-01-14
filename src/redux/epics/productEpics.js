@@ -7,7 +7,7 @@ import { productFailure, productSucces } from "../actions/actionCreators/actionC
 export const productEpic = action$ => action$.pipe(
     ofType(PRODUCT_REQUEST),
     map(o => o.payload.id),
-    switchMap((id) => ajax.getJSON(`https://ra-online-store-backend-rtff.onrender.com/api/items/${id}`).pipe(
+    switchMap((id) => ajax.getJSON(`https://ra-online-store-backend-nb19.onrender.com/api/items/${id}`).pipe(
         map(o => productSucces(o)),
         catchError(o => of(productFailure(o))),
     ))

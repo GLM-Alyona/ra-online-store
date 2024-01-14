@@ -8,7 +8,7 @@ export const cartOrderEpic = action$ => action$.pipe(
     ofType(CART_ORDER_REQUEST),
     map(o => o.payload.body),
     switchMap((body) => ajax({
-        url: 'https://ra-online-store-backend-rtff.onrender.com/api/order',
+        url: 'https://ra-online-store-backend-nb19.onrender.com/api/order',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
